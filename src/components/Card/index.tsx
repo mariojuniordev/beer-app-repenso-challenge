@@ -38,28 +38,53 @@ const CardContainer = styled.div`
 export default function Card(props: CardProps) {
   return (
     <CardContainer>
-      <Flex alignItems="center">
-        <Img
-          height="180px"
-          src="images/beer.png"
-        />
+      <Flex flexDirection="column" alignItems="center">
 
-        <Flex gap="8px" flexDirection="column" alignItems="center">
-          <Text mb="16px" variant="h1" textAlign="center">{ props.name }</Text>
-          <Text>ABV: { abvFormatter(props.abv) }</Text>
-          <Text>Category: { props.category ?? 'Unavailable' }</Text>
+        <Text mb="16px" variant="h1" textAlign="center">{ props.name }</Text>
 
-          <Flex
-            justifyContent="center"
-            backgroundColor="var(--green)"
-            width="200px"
-            borderRadius="50px"
-            p="8px"
-            mt="16px"
-          >
-            <Text>{ props.country }</Text>
+        <Flex>
+          <Img
+            height="180px"
+            src="images/beer.png"
+            mr="32px"
+          />
+
+          <Flex flexDirection="column" alignItems="center">
+            <Flex
+              justifyContent="center"
+              backgroundColor="var(--red)"
+              width="200px"
+              borderRadius="50px"
+              p="8px"
+              mt="16px"
+            >
+              <Text>ABV: { abvFormatter(props.abv) }</Text>
+            </Flex>
+
+            <Flex
+              justifyContent="center"
+              backgroundColor="var(--blue)"
+              width="200px"
+              borderRadius="50px"
+              p="8px"
+              mt="16px"
+            >
+            <Text textAlign="center">Category: { props.category ?? 'Unavailable' }</Text>
+            </Flex>
+
+            <Flex
+              justifyContent="center"
+              backgroundColor="var(--green)"
+              width="200px"
+              borderRadius="50px"
+              p="8px"
+              mt="16px"
+            >
+              <Text>{ props.country }</Text>
+            </Flex>
           </Flex>
         </Flex>
+
       </Flex>
 
       { props.website &&

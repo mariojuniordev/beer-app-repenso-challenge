@@ -8,6 +8,8 @@ export default createGlobalStyle`
     --gray-white: #e5e5e5;
     --white: #fff;
     --green: #00a000;
+    --blue: #4040ff;
+    --red: #ff4040;
   }
 
   * {

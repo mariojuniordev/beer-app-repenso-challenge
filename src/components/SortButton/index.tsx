@@ -16,7 +16,7 @@ const ButtonContainer = styled.button<ButtonContainerProps>`
     background-color: ${active ? 'var(--gray-white)' : 'var(--secondary)'};
     padding: 16px;
     margin-bottom: 16px;
-    border-radius: 10px;
+    border-radius: 50px;
     border: 1px solid ${active ? 'var(--secondary)' : 'var(--gray-white)'};
   `}
 `

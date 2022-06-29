@@ -27,6 +27,16 @@ const CardsContainer = styled.div`
   }
 `
 
+const SortButtonContainer = styled.div`
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+
+  @media(max-width: 768px) {
+    flex-direction: column;
+  }
+`
+
 export default function Main() {
   const [beerData, setBeerData] = useState<beerData[] | null>(null);
   const [value, setValue] = useState('');
@@ -86,7 +96,7 @@ export default function Main() {
 
   return (
     <Container>
-      <Heading color="var(--gray-white)" textTransform="uppercase" variant="h1">
+      <Heading color="var(--gray-white)" textTransform="uppercase" variant="h1" size="50px">
         beer app
       </Heading>
       <Text mt="48px" color="var(--gray-white)" textTransform="capitalize">
@@ -106,17 +116,19 @@ export default function Main() {
           onChange={(e) => setValue(e.target.value)}
         />
 
-        <SortButton
-            label={aplhabeticalSortText}
-            onClick={() => setAlphabeticalSortActive(!alphabeticalSortActive)}
-            active={alphabeticalSortActive}
-          />
+        <SortButtonContainer>
+          <SortButton
+              label={aplhabeticalSortText}
+              onClick={() => setAlphabeticalSortActive(!alphabeticalSortActive)}
+              active={alphabeticalSortActive}
+           />
 
           <SortButton
             label={abvSortText}
             onClick={() => setAbvSortActive(!abvSortActive)}
             active={abvSortActive}
           />
+        </SortButtonContainer>
 
       <CardsContainer>
         {filteredData?.map((item, index) =>
