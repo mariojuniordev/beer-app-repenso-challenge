@@ -25,6 +25,8 @@ yarn
 
 yarn dev
 
+<h2>Importante Lembrar de Executar o Backend Disponibilizado no Link Acima Para Correto Funcionamento da Aplicação</h2>
+
 <h3>Requisitos Propostos pela Empresa</h3>
 
 - Mostrar os dados de forma organizada;
