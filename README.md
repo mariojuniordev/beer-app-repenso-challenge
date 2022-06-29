@@ -5,7 +5,7 @@ Este repositório é destinado a um desafio de código proposto pela empresa Rep
 <h1>IMPORTANTE!!!</h1>
 
 - O projeto do Backend não veio com o CORS configurado, estáva dando bloqueio de CORS ao tentar consumir no frontend;
-- Adicionei a configuração de CORS no backend e mudei a porta de exucução do projeto para http://localhost:8080;
+- Adicionei a configuração de CORS no backend e mudei a porta de execução do projeto para http://localhost:8080;
 - Link do novo repositório do backend para consumo: https://github.com/mariojuniordev/repenso-beer-backend-atualizado;
 - Obs.: o frontend já está configurado para consumir a API na porta 8080;
 
