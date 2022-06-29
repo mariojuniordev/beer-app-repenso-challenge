@@ -12,6 +12,10 @@ export interface TextProps {
   lineHeight?: string | number;
   variant?: Variant;
   fontSize?: string;
+  textTransform?: string;
+  overflow?: string;
+  whiteSpace?: string;
+  textOverflow?: string;
 }
 
 /**
@@ -48,12 +52,16 @@ function switchVariant(variant: Variant) {
  */
 
 export const Text = styled.p<TextProps & PaddingProps & MarginProps & DimensionsProps & BorderProps>`
-  ${({ color = 'black', fontWeight = 400, textAlign, lineHeight, variant = 'h3', fontSize }) => css`
+  ${({ overflow, whiteSpace, textOverflow, color = 'black', fontWeight = 400, textAlign, lineHeight, variant = 'h3', fontSize, textTransform }) => css`
     color: ${color};
     font-size: ${fontSize ?? switchVariant(variant)};
     font-weight: ${fontWeight};
     text-align: ${textAlign};
     line-height: ${lineHeight};
+    text-transform: ${textTransform};
+    overflow: ${overflow};
+    white-space: ${whiteSpace};
+    text-overflow: ${textOverflow};
     ${(props) => processPadding(props as PaddingProps)}
     ${(props) => processMargin(props as MarginProps)}
     ${(props) => processDimensions(props as DimensionsProps)}

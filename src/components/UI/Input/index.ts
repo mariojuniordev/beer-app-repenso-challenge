@@ -12,7 +12,6 @@ export const Input = styled.input<PaddingProps & MarginProps & DimensionsProps &
   ${({ border, borderRadius }) => css`
     border: ${border};
     border-radius: ${borderRadius};
-    font-style: italic;
     ${(props) => processDimensions(props as DimensionsProps)}
     ${(props) => processPadding(props as PaddingProps)}
     ${(props) => processMargin(props as MarginProps)}

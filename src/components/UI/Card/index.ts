@@ -7,15 +7,17 @@ import { PaddingProps, processPadding } from '../@types/padding';
 interface AnchorProps {
   backgroundColor?: string;
   flexDirection?: string;
+  textDecoration?: string;
 }
 
 export const Anchor = styled.a<PaddingProps & MarginProps & DimensionsProps & AnchorProps & BorderProps>`
-  ${({ backgroundColor, flexDirection }) => css`
+  ${({ backgroundColor, flexDirection, textDecoration }) => css`
     display: flex;
     flex-direction: ${flexDirection};
     align-items: center;
     justify-content: center;
     background-color: ${backgroundColor};
+    text-decoration: ${textDecoration};
     text-decoration: none;
     ${(props) => processBorder(props as BorderProps)}
     ${(props) => processDimensions(props as DimensionsProps)}

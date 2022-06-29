@@ -8,16 +8,18 @@ export interface HeadingProps {
   textAlign?: TextAlign;
   lineHeight?: string | number;
   variant?: Variant;
+  textTransform?: string;
 }
 
 export const Heading = styled('h1').attrs<HeadingProps>(({ variant }) => ({
   as: variant
 }))<HeadingProps>`
-  ${({ color, size, fontWeight, lineHeight, textAlign }) => css`
+  ${({ color, size, fontWeight, lineHeight, textAlign, textTransform }) => css`
     font-size: ${size};
     color: ${color};
     text-align: ${textAlign};
     font-weight: ${fontWeight};
     line-height: ${lineHeight};
+    text-transform: ${textTransform};
   `}
 `
