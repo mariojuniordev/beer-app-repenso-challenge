@@ -13,7 +13,7 @@ Este repositório é destinado a um desafio de código proposto pela empresa Rep
 
 <h2>Solução Adotada para o Projeto</h2>
 
-- O projeto foi desenvolvido ReactJS e NextJS com template de TypeScript;
+- O projeto foi desenvolvido utlizando ReactJS e NextJS com template de TypeScript;
 - Por questões de agilidade e maior afinidade com a tecnologia foi utilizado Styled Components para desenvolvimento da User Interface;
 - Para consumo da API foi utilizado a lib Axios;
 
@@ -25,11 +25,11 @@ yarn
 
 yarn dev
 
-<h2>Importante Lembrar de Executar o Backend Disponibilizado no Link Acima Para Correto Funcionamento da Aplicação</h2>
+<h2>IMPORRTATE LEMBRAR DE EXECUTAR O BACKEND DISPONIBILIZADO NO LINK ACIMA PARA CORRETO FUNCIONAMENTO DA APLICAÇÃO!</h2>
 
 <h3>Requisitos Propostos pela Empresa</h3>
 
 - Mostrar os dados de forma organizada;
-- Adicionar Filtro para filtras dados;
+- Adicionar filtro para os dados;
 - Adicionar mecânica de ordenação dos dados;  
 
